@@ -110,6 +110,7 @@ def _build() -> dict[Any, Any]:
 
     # logical target: handled by a custom installer (never resolved by the generic replacer)
     cfg['sdpa'] = KernelChoice(op='sdpa_attention', backends=('npu', ))
+    cfg['flash_attention_3'] = KernelChoice(op='flash_attention_3', backends=('cuda', ))
     cfg['fla'] = KernelChoice(op='fla', backends=('npu', ))
     return cfg
 
